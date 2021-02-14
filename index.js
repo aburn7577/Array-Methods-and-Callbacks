@@ -77,7 +77,7 @@ function getWinners(arr, cb) {
 }
    
 
-console.log(fifaData, getFinals);
+console.log(getWinners(fifaData, getFinals));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
