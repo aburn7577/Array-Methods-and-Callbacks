@@ -121,7 +121,7 @@ function getAverageGoals(cb) {
    }, 0)
    return ((advHome / cb.length) + (advAway / cb.length)).toFixed(2)
 }
-console.log(getAverageGoals(getFinals(fifaData)))
+// console.log(getAverageGoals(getFinals(fifaData)))
 
 
 
