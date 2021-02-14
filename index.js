@@ -39,7 +39,7 @@ function getFinals(item) {
    let finals = fifaData.filter(item=> item.Stage = 'Final');
    return finals
 }
-// console.log(getFinals());
+// console.log(getFinals());   /*alot of objects*/
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -48,10 +48,12 @@ Use the higher-order function called getYears to do the following:
 2. Receive a callback function getFinals from task 2 
 3. Return an array called years containing all of the years in the getFinals data set*/
 
-function getYears(/* code here */) {
-    /* code here */
+function getYears(array, callback) {
+    let years = []
+    years = callback(array).map((item) => item.Year);
+    return years
 }
-
+// console.log(getYears(fifaData, getFinals)) /*alot of items*/
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
