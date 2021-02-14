@@ -99,7 +99,7 @@ function getWinnersByYear(array, cb3, cb4) {
     }
     return str
 }
-console.log(getWinnersByYear(fifaData,getYears, getWinners));
+// console.log(getWinnersByYear(fifaData,getYears, getWinners));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -112,10 +112,16 @@ Use the higher order function getAverageGoals to do the following:
  Example of invocation: getAverageGoals(getFinals(fifaData));
 */
 
-function getAverageGoals(/* code here */) {
-   /* code here */
+function getAverageGoals(cb) {
+   let advHome = cb.reduce((total,item) => {
+       return total + item['Home Team Goals']
+   },0)
+   let advAway = cb.reduce((total, item) =>{
+       return total + item['Away Team Goals']
+   }, 0)
+   return ((advHome / cb.length) + (advAway / cb.length)).toFixed(2)
 }
-
+console.log(getAverageGoals(getFinals(fifaData)))
 
 
 
